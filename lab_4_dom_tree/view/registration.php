@@ -125,39 +125,6 @@ $(function() {
         });
     }
 
-    function convertJsonToHtmlTree(branches) {
-
-        var ul = document.createElement("ul");
-
-        for (var i = 0, n = Object.keys(branches); i < n; i++) {
-            var branch = branches[i];
-            var li = document.createElement("li");
-
-            var text = document.createTextNode(Object.keys(branch)[0]);
-            li.appendChild(text);
-
-            if (Object.values(branch)) {
-                 li.appendChild(convertJsonToHtmlTree(Object.values(branch)));
-            }
-
-            ul.appendChild(li);
-        }
-
-        return ul;
-    }
-
-    // var tree = document.getElementById("tree");
-    // tree.appendChild(convertJsonToHtmlTree(treeObj["Garden"]));
-
-    function renderTreeView(data) {
-        Object.keys(data).forEach(function(key) {
-     //       console.log("<li>" + Object.keys(data[key])[0] + "</li>");
-//            console.log("<li>" + data[key] + "</li>");
-            console.log(Object.values(data));
-        })
-    }
-// renderTreeView(treeObj);
-
 });
 </script>
 
