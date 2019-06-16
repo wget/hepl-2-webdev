@@ -14,98 +14,371 @@
 .home:hover {
     text-decoration: none;
 }
-#registration-form #profile-picture-render {
-    position: relative;
-    background-color: rgba(0, 0, 0, 0.075);
-}
-#registration-form #profile-picture-render .fa-user {
-    font-size: 100px;
+
+#default-shapes .col, #canva-area .col {
+    padding: 15px;
 }
 
-#registration-form #profile-picture-render #profile-picture-render-img {
-    padding: 15px;
-    display: block;
-    text-align: center;
+#canva-area .col div {
     margin: auto;
 }
 
-#registration-form #profile-picture-select {
+#canva-area .col {
+    outline: 1px solid black;
+    margin: 10px;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(40, 167, 69, 0.5);
+}
+
+.overlay i {
+    color: green;
+    text-align: center;
+    line-height: 120px;
+    display: block;
+    font-size: 100px;
+}
+
+#points-scroll-only {
+    position: fixed;
+    top: 50px;
+    right: 24px;
     display: none;
+}
+
+/* Add some CSS generated shapes
+ * src.: https://css-tricks.com/the-shapes-of-css/
+ */
+.shape-square {
+    width: 100px;
+    height: 100px;
+    background: black;
+}
+
+.shape-rectangle {
+    width: 200px;
+    height: 100px;
+    background: black;
+}
+
+.shape-circle {
+    width: 100px;
+    height: 100px;
+    background: black;
+    border-radius: 50%
+}
+
+.shape-oval {
+    width: 200px;
+    height: 100px;
+    background: black;
+    border-radius: 100px / 50px;
+}
+
+.shape-triangle-up {
+    width: 0;
+    height: 0;
+    margin: auto;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid black;
+}
+
+.shape-triangle-down {
+    width: 0;
+    height: 0;
+    margin: auto;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 100px solid black;
+}
+
+.shape-triangle-left {
+    width: 0;
+    height: 0;
+    margin: auto;
+    border-top: 50px solid transparent;
+    border-right: 100px solid black;
+    border-bottom: 50px solid transparent;
+}
+
+.shape-triangle-right {
+    width: 0;
+    height: 0;
+    margin: auto;
+    border-top: 50px solid transparent;
+    border-left: 100px solid black;
+    border-bottom: 50px solid transparent;
+}
+
+
+.shape-triangle-top-left {
+    width: 0;
+    height: 0;
+    margin: auto;
+    border-top: 100px solid black;
+    border-right: 100px solid transparent;
+}
+
+.shape-triangle-top-right {
+    width: 0;
+    height: 0;
+    margin: auto;
+    border-top: 100px solid black;
+    border-left: 100px solid transparent;
+}
+
+.shape-triangle-bottom-left {
+    width: 0;
+    height: 0;
+    margin: auto;
+    border-bottom: 100px solid black;
+    border-right: 100px solid transparent;
+}
+
+.shape-triangle-bottom-right {
+    width: 0;
+    height: 0;
+    margin: auto;
+    border-bottom: 100px solid black;
+    border-left: 100px solid transparent;
+}
+
+.shape-trapezoid {
+    width: 100px;
+    height: 0;
+    margin: auto;
+    border-bottom: 100px solid black;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+}
+
+.shape-parallelogram {
+    width: 100px;
+    height: 100px;
+    margin: 0 20px;
+    transform: skew(20deg);
+    background: black;
+}
+
+.shape-star-six {
+    width: 0;
+    height: 0;
+    margin: auto;
+    border-left: 35px solid transparent;
+    border-right: 35px solid transparent;
+    border-bottom: 70px solid black;
+    position: relative;
+}
+.shape-star-six:after {
+    width: 0;
+    height: 0;
+    border-left: 35px solid transparent;
+    border-right: 35px solid transparent;
+    border-top: 70px solid black;
+    position: absolute;
+    content: "";
+    top: 30px;
+    left: -35px;
+}
+
+.shape-star-five {
+    position: relative;
+    display: block;
+    color: black;
+    width: 0px;
+    height: 0px;
+    top: 30px;
+    border-right: 50px solid transparent;
+    border-bottom: 35px solid black;
+    border-left: 50px solid transparent;
+    transform: rotate(35deg);
+}
+.shape-star-five:before {
+    border-bottom: 40px solid black;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    position: absolute;
+    height: 0;
+    width: 0;
+    top: -22px;
+    left: -33px;
+    display: block;
+    content: '';
+    transform: rotate(-35deg);
+}
+.shape-star-five:after {
+    position: absolute;
+    display: block;
+    color: black;
+    top: 3px;
+    left: -55px;
+    width: 0px;
+    height: 0px;
+    border-right: 50px solid transparent;
+    border-bottom: 35px solid black;
+    border-left: 50px solid transparent;
+    transform: rotate(-70deg);
+    content: '';
+}
+
+.shape-pentagon {
+    position: relative;
+    width: 54px;
+    top: 35px;
+    margin: auto;
+    box-sizing: content-box;
+    border-width: 50px 18px 0;
+    border-style: solid;
+    border-color: black transparent;
+}
+.shape-pentagon:before {
+    content: "";
+    position: absolute;
+    height: 0;
+    width: 0;
+    top: -85px;
+    left: -18px;
+    border-width: 0 45px 35px;
+    border-style: solid;
+    border-color: transparent transparent black;
+    margin: auto;
+}
+
+.shape-hexagon {
+    width: 100px;
+    height: 50px;
+    background: black;
+    position: relative;
+    top: 25px;
+    margin: auto;
+}
+.shape-hexagon:before {
+    content: "";
+    position: absolute;
+    top: -25px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 25px solid black;
+}
+.shape-hexagon:after {
+    content: "";
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 25px solid black;
+}
+
+.shape-octagon {
+    width: 100px;
+    height: 100px;
+    background: black;
+    position: relative;
+    margin: auto;
+}
+.shape-octagon:before {
+    content: "";
+    width: 100px;
+    height: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-bottom: 29px solid black;
+    border-left: 29px solid #fff;
+    border-right: 29px solid #fff;
+}
+.shape-octagon:after {
+    content: "";
+    width: 100px;
+    height: 0;
     position: absolute;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.3);
-    padding: 10px;
-    width: 100%;
+    left: 0;
+    border-top: 29px solid black;
+    border-left: 29px solid #fff;
+    border-right: 29px solid #fff;
+}  
+
+.shape-heart {
+    position: relative;
+    width: 100px;
+    height: 90px;
+    top: 10px;
+}
+.shape-heart:before,
+.shape-heart:after {
+    position: absolute;
+    content: "";
+    left: 50px;
+    top: 0;
+    width: 50px;
+    height: 80px;
+    background: black;
+    border-radius: 50px 50px 0 0;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+}
+.shape-heart:after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
 }
 
-#registration-form #profile-picture-select label {
-    margin: 0;
+.shape-diamond {
+    width: 0;
+    height: 0;
+    border: 50px solid transparent;
+    border-bottom-color: black;
+    position: relative;
+    margin: auto;
+    top: -50px;
+}
+.shape-diamond:after {
+    content: '';
+    position: absolute;
+    left: -50px;
+    top: 50px;
+    width: 0;
+    height: 0;
+    border: 50px solid transparent;
+    border-top-color: black;
 }
 
-#registration-form #profile-picture-render:hover #profile-picture-select {
-    display: block;
+.shape-burst-12 {
+    background: black;
+    width: 65px;
+    height: 65px;
+    position: relative;
+    top: 15px;
+    margin: auto;
+    text-align: center;
 }
-
-#registration-spinner {
-    display: none;
-    animation: spin 1.5s infinite linear;
-    margin-right: 10px;
+.shape-burst-12:before,
+.shape-burst-12:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 65px;
+    width: 65px;
+    background: black;
 }
-
-@keyframes spin {
-    from {
-        transform:rotate(0deg);
-    }
-
-    to {
-       transform:rotate(360deg);
-    }
+.shape-burst-12:before {
+    transform: rotate(30deg);
 }
-
-.separator {
-    clear: both;
-}
-
-#inject-button {
-    margin: 15px 0;
-}
-
-/* src.: https://www.w3schools.com/howto/howto_js_treeview.asp */
-/* Remove default bullets */
-ul, #treeview {
-    list-style-type: none;
-}
-
-/* Remove margins and padding from the parent ul */
-#treeview {
-    margin: 0;
-    padding: 0;
-}
-
-/* Style the caret/arrow */
-.caret {
-    cursor: pointer;
-    user-select: none; /* Prevent text selection */
-}
-
-/* Create the caret/arrow with a unicode, and style it */
-.caret::before {
-    content: "\25B6";
-    color: black;
-    display: inline-block;
-    margin-right: 6px;
-}
-
-/* Rotate the caret/arrow icon when clicked on (using JavaScript) */
-.caret-down::before {
-    transform: rotate(90deg);
-}
-
-/* Show the nested list when the user clicks on the caret/arrow (with JavaScript) */
-.active {
-    display: block;
-}
-
-#treeview-area img {
-    width: 100%;
+.shape-burst-12:after {
+    transform: rotate(60deg);
 }

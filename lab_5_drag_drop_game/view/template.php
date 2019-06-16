@@ -16,7 +16,7 @@
     <script type="text/javascript" src="<?php echo ROOT_WEB ?>/public/js/scripts.js"></script>
   </head>
   <body>
-    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+    <div id="menu-bar" class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
     <a class="my-0 mr-md-auto font-weight-normal home" href="<?php ROOT_WEB ?> /index.php"><h5 class="my-0">Lab 5 Drag Drop Game<i class="fas fa-rocket"></i></h5></a>
     </div>
 
