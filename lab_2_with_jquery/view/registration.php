@@ -161,7 +161,7 @@ $(function() {
             dataType: 'json',
             // Type of the data to send
             contentType: "application/json",
-            // Prevent a,uthing other than a string from being converted as an
+            // Prevent anything other than a string from being converted as an
             // url encoded query string.
             processData: false,
             data: JSON.stringify({ "email": $("#email").val() }),
